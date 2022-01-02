@@ -19,5 +19,26 @@ namespace eco_system
             InitializeComponent();
         }
 
+        private void onActionsClick(object sender, EventArgs e)
+        {
+            string buttonName = ((Button)sender).Name.ToLower();
+
+            switch (buttonName)
+            {
+                case "buttonAdministration": 
+
+                    break;
+                case "buttonMEC": 
+                    
+                    break;
+                case "buttonHealthcare": 
+                    
+                    break;
+                case "buttonPersonalAccount": 
+                    
+                    break;
+            }
+
+        }
     }
 }

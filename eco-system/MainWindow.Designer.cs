@@ -54,6 +54,7 @@
             this.buttonAdministration.TabIndex = 1;
             this.buttonAdministration.Text = "Администрация";
             this.buttonAdministration.UseVisualStyleBackColor = true;
+            this.buttonAdministration.Click += new System.EventHandler(this.onActionsClick);
             // 
             // buttonMEC
             // 
@@ -64,6 +65,7 @@
             this.buttonMEC.TabIndex = 2;
             this.buttonMEC.Text = "МЧС";
             this.buttonMEC.UseVisualStyleBackColor = true;
+            this.buttonMEC.Click += new System.EventHandler(this.onActionsClick);
             // 
             // buttonHealthcare
             // 
@@ -74,6 +76,7 @@
             this.buttonHealthcare.TabIndex = 3;
             this.buttonHealthcare.Text = "Здравохранение";
             this.buttonHealthcare.UseVisualStyleBackColor = true;
+            this.buttonHealthcare.Click += new System.EventHandler(this.onActionsClick);
             // 
             // buttonPersonalAccount
             // 
@@ -84,6 +87,7 @@
             this.buttonPersonalAccount.TabIndex = 4;
             this.buttonPersonalAccount.Text = "Личный кабинет";
             this.buttonPersonalAccount.UseVisualStyleBackColor = true;
+            this.buttonPersonalAccount.Click += new System.EventHandler(this.onActionsClick);
             // 
             // MainWindow
             // 
