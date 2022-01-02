@@ -65,6 +65,12 @@
     <Compile Include="Forms\CreateCall.Designer.cs">
       <DependentUpon>CreateCall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPerson.Designer.cs">
+      <DependentUpon>EditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InfoOrganization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateCall.resx">
       <DependentUpon>CreateCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPerson.resx">
+      <DependentUpon>EditPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfoOrganization.resx">
       <DependentUpon>InfoOrganization.cs</DependentUpon>
