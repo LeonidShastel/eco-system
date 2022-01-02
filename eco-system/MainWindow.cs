@@ -31,11 +31,13 @@ namespace eco_system
                 case "buttonAdministration":
                     formToRun = new AdministrationForm();
                     break;
-                case "buttonMEC": 
-                    
+                case "buttonMEC":
+                    InfoOrganization organization = new InfoOrganization();
+                    organization.number_organization = 101;
                     break;
-                case "buttonHealthcare": 
-                    
+                case "buttonHealthcare":
+                    InfoOrganization organization = new InfoOrganization();
+                    organization.number_organization = 101;
                     break;
                 case "buttonPersonalAccount":
                     formToRun = new PersonalAccount();
