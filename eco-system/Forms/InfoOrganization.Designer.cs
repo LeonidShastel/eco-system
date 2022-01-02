@@ -40,6 +40,8 @@
             // 
             // dataGridViewCalls
             // 
+            this.dataGridViewCalls.AllowUserToAddRows = false;
+            this.dataGridViewCalls.AllowUserToDeleteRows = false;
             this.dataGridViewCalls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCalls.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -47,8 +49,11 @@
             this.user_name,
             this.user_address,
             this.call_time});
+            this.dataGridViewCalls.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewCalls.Location = new System.Drawing.Point(12, 80);
+            this.dataGridViewCalls.MultiSelect = false;
             this.dataGridViewCalls.Name = "dataGridViewCalls";
+            this.dataGridViewCalls.ReadOnly = true;
             this.dataGridViewCalls.Size = new System.Drawing.Size(674, 228);
             this.dataGridViewCalls.TabIndex = 0;
             // 
@@ -57,6 +62,7 @@
             this.id.Frozen = true;
             this.id.HeaderText = "ID";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Width = 30;
             // 
             // title
@@ -64,6 +70,7 @@
             this.title.Frozen = true;
             this.title.HeaderText = "Причина";
             this.title.Name = "title";
+            this.title.ReadOnly = true;
             this.title.Width = 150;
             // 
             // user_name
@@ -71,6 +78,7 @@
             this.user_name.Frozen = true;
             this.user_name.HeaderText = "Имя пользователя";
             this.user_name.Name = "user_name";
+            this.user_name.ReadOnly = true;
             this.user_name.Width = 150;
             // 
             // user_address
@@ -78,6 +86,7 @@
             this.user_address.Frozen = true;
             this.user_address.HeaderText = "Адрес";
             this.user_address.Name = "user_address";
+            this.user_address.ReadOnly = true;
             this.user_address.Width = 150;
             // 
             // call_time
@@ -85,6 +94,7 @@
             this.call_time.Frozen = true;
             this.call_time.HeaderText = "Время вызова";
             this.call_time.Name = "call_time";
+            this.call_time.ReadOnly = true;
             this.call_time.Width = 150;
             // 
             // buttonUpdate

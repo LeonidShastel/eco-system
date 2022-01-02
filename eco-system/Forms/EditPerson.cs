@@ -15,6 +15,7 @@ namespace eco_system.Forms
     public partial class EditPerson : Form
     {
         Person mEditedPerson; 
+        
         public EditPerson(Person person)
         {
             InitializeComponent();
@@ -43,13 +44,14 @@ namespace eco_system.Forms
 
             bool isTaskCompleted;
 
-            if (mEditedPerson != null)
+            if (mEditedPerson.id != 0)
             {
-
                 isTaskCompleted = (Task.Run(() => ApiRequests.UpdatePerson(mEditedPerson)).Result != null);
+                Debug.WriteLine("Update");
             } else
             {
                 isTaskCompleted = (Task.Run(() => ApiRequests.CreatePerson(mEditedPerson)).Result != null);
+                Debug.WriteLine("Create");
             }
 
             Debug.WriteLine($"Операция выполнена успешно? -> {isTaskCompleted}");
