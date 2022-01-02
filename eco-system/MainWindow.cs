@@ -32,12 +32,14 @@ namespace eco_system
                     formToRun = new AdministrationForm();
                     break;
                 case "buttonMEC":
-                    InfoOrganization organization = new InfoOrganization();
-                    organization.number_organization = 101;
+                    InfoOrganization organization_mec = new InfoOrganization();
+                    organization_mec.number_organization = 101;
+                    organization_mec.GetInfoCalls();
                     break;
                 case "buttonHealthcare":
-                    InfoOrganization organization = new InfoOrganization();
-                    organization.number_organization = 101;
+                    InfoOrganization organization_zdr = new InfoOrganization();
+                    organization_zdr.number_organization = 101;
+                    organization_zdr.GetInfoCalls();
                     break;
                 case "buttonPersonalAccount":
                     formToRun = new PersonalAccount();
