@@ -42,11 +42,25 @@ namespace eco_system.Forms
 
         private Person getSelectedPerson()
         {
-            int rowIndex = people_grid_view.SelectedCells[0].RowIndex;
-            int personId = int.Parse(people_grid_view.Rows[rowIndex].Cells[0].Value.ToString());
+            DataGridViewSelectedCellCollection collection = people_grid_view.SelectedCells;
+            
+            Person person;
+            
+            if (collection != null && collection.Count > 0)
+            {
+                DataGridViewCell cell = collection[0];
 
-            Person person = Task.Run(() => ApiRequests.GetCurrentPerson(personId)).Result;
+                if (cell != null)
+                {
+                    int rowIndex = cell.RowIndex;
+                    int personId = int.Parse(people_grid_view.Rows[rowIndex].Cells[0].Value.ToString());
 
+                    person = Task.Run(() => ApiRequests.GetCurrentPerson(personId)).Result;
+                }
+                else person = null;
+            }
+            else person = null;
+            
             return person;
         }
 
@@ -57,24 +71,40 @@ namespace eco_system.Forms
 
         private void edit_person_button_Click(object sender, EventArgs e)
         {
-            Form editPerson = new EditPerson(getSelectedPerson());
+            Person person = getSelectedPerson();
+
+            if (person != null)
+            {
+                Form editPerson = new EditPerson(person);
+                editPerson.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Ни один из пользователей не выбран!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void delete_person_button_Click(object sender, EventArgs e)
         {
-            int rowIndex = people_grid_view.SelectedCells[0].RowIndex;
-            int personId = int.Parse(people_grid_view.Rows[rowIndex].Cells[0].Value.ToString());
+            Person person = getSelectedPerson();
 
-            bool isPersonDeleted = Task.Run(() => ApiRequests.DeletePerson(personId)).Result;
+            if (person != null)
+            {
+                bool isPersonDeleted = Task.Run(() => ApiRequests.DeletePerson(person.id)).Result;
 
-            Debug.WriteLine($"Пользователь с ID = {personId} удален? -> {isPersonDeleted}");
+                Debug.WriteLine($"Пользователь с ID = {person.id} удален? -> {isPersonDeleted}");
 
-            updatePersonList();
+                updatePersonList();
+            } else
+            {
+                MessageBox.Show("Ни один из пользователей не выбран!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void add_person_button_Click(object sender, EventArgs e)
         {
-            
+            Form editPerson = new EditPerson(null);
+            editPerson.ShowDialog();
         }
     }
 }
