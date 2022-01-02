@@ -13,12 +13,9 @@ namespace eco_system.Forms
 {
     public partial class AdministrationForm : Form
     {
-        private ListView mPeopleListView;
         public AdministrationForm()
         {
             InitializeComponent();
-
-            mPeopleListView = people_list_view;
 
             Person[] persons = Task.Run(() => new ApiRequests().GetUsers()).Result;
 
@@ -26,8 +23,9 @@ namespace eco_system.Forms
             {
                 foreach (Person person in persons)
                 {
-                    ListViewItem item = new ListViewItem();
-                    item.SubItems.Add(person.id);
+                    string[] row = { person.id.ToString(), person.firstname, person.lastname, person.patronymic, person.date_of_birth, person.address, person.place_of_work };
+
+                    people_grib_view.Rows.Add(row);
                 }
             }
         }

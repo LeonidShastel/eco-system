@@ -30,21 +30,23 @@
         {
             this.hello_label = new System.Windows.Forms.Label();
             this.position_label = new System.Windows.Forms.Label();
-            this.people_list_view = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.users_action_group_box = new System.Windows.Forms.GroupBox();
             this.additional_group_box = new System.Windows.Forms.GroupBox();
-            this.id_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.surname_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.patronymic_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.date_birth_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.adress_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.work_column_header = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.people_grib_view = new System.Windows.Forms.DataGridView();
+            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surname_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patronymic_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_birth_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.work_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.users_action_group_box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.people_grib_view)).BeginInit();
             this.SuspendLayout();
             // 
             // hello_label
@@ -66,24 +68,6 @@
             this.position_label.Size = new System.Drawing.Size(57, 21);
             this.position_label.TabIndex = 1;
             this.position_label.Text = "Вы: %s";
-            // 
-            // people_list_view
-            // 
-            this.people_list_view.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id_column_header,
-            this.name_column_header,
-            this.surname_column_header,
-            this.patronymic_column_header,
-            this.date_birth_column_header,
-            this.adress_column_header,
-            this.work_column_header});
-            this.people_list_view.HideSelection = false;
-            this.people_list_view.Location = new System.Drawing.Point(17, 58);
-            this.people_list_view.MultiSelect = false;
-            this.people_list_view.Name = "people_list_view";
-            this.people_list_view.Size = new System.Drawing.Size(278, 358);
-            this.people_list_view.TabIndex = 2;
-            this.people_list_view.UseCompatibleStateImageBehavior = false;
             // 
             // button1
             // 
@@ -132,7 +116,7 @@
             this.users_action_group_box.Controls.Add(this.button3);
             this.users_action_group_box.Controls.Add(this.button2);
             this.users_action_group_box.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.users_action_group_box.Location = new System.Drawing.Point(302, 50);
+            this.users_action_group_box.Location = new System.Drawing.Point(17, 57);
             this.users_action_group_box.Name = "users_action_group_box";
             this.users_action_group_box.Size = new System.Drawing.Size(243, 127);
             this.users_action_group_box.TabIndex = 7;
@@ -141,54 +125,84 @@
             // 
             // additional_group_box
             // 
-            this.additional_group_box.Location = new System.Drawing.Point(302, 183);
+            this.additional_group_box.Location = new System.Drawing.Point(266, 57);
             this.additional_group_box.Name = "additional_group_box";
-            this.additional_group_box.Size = new System.Drawing.Size(243, 103);
+            this.additional_group_box.Size = new System.Drawing.Size(243, 127);
             this.additional_group_box.TabIndex = 8;
             this.additional_group_box.TabStop = false;
             this.additional_group_box.Text = "Дополнительно";
             // 
-            // id_column_header
+            // people_grib_view
             // 
-            this.id_column_header.Text = "ID";
+            this.people_grib_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.people_grib_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_column,
+            this.name_column,
+            this.surname_column,
+            this.patronymic_column,
+            this.phone_column,
+            this.date_birth_column,
+            this.address_column,
+            this.work_column});
+            this.people_grib_view.Location = new System.Drawing.Point(17, 190);
+            this.people_grib_view.Name = "people_grib_view";
+            this.people_grib_view.Size = new System.Drawing.Size(844, 150);
+            this.people_grib_view.TabIndex = 9;
             // 
-            // name_column_header
+            // id_column
             // 
-            this.name_column_header.Text = "Имя";
+            this.id_column.HeaderText = "ID";
+            this.id_column.Name = "id_column";
             // 
-            // surname_column_header
+            // name_column
             // 
-            this.surname_column_header.Text = "Фамилия";
+            this.name_column.HeaderText = "Имя";
+            this.name_column.Name = "name_column";
             // 
-            // patronymic_column_header
+            // surname_column
             // 
-            this.patronymic_column_header.Text = "Отчество";
+            this.surname_column.HeaderText = "Фамилия";
+            this.surname_column.Name = "surname_column";
             // 
-            // date_birth_column_header
+            // patronymic_column
             // 
-            this.date_birth_column_header.Text = "День Рождения";
+            this.patronymic_column.HeaderText = "Отчество";
+            this.patronymic_column.Name = "patronymic_column";
             // 
-            // adress_column_header
+            // phone_column
             // 
-            this.adress_column_header.Text = "Адрес";
+            this.phone_column.HeaderText = "Телефон";
+            this.phone_column.Name = "phone_column";
             // 
-            // work_column_header
+            // date_birth_column
             // 
-            this.work_column_header.Text = "Место работы";
+            this.date_birth_column.HeaderText = "Дата Рождения";
+            this.date_birth_column.Name = "date_birth_column";
+            // 
+            // address_column
+            // 
+            this.address_column.HeaderText = "Адрес";
+            this.address_column.Name = "address_column";
+            // 
+            // work_column
+            // 
+            this.work_column.HeaderText = "Место работы";
+            this.work_column.Name = "work_column";
             // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 428);
+            this.ClientSize = new System.Drawing.Size(874, 346);
+            this.Controls.Add(this.people_grib_view);
             this.Controls.Add(this.additional_group_box);
             this.Controls.Add(this.users_action_group_box);
-            this.Controls.Add(this.people_list_view);
             this.Controls.Add(this.position_label);
             this.Controls.Add(this.hello_label);
             this.Name = "AdministrationForm";
             this.Text = "AdministrationForm";
             this.users_action_group_box.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.people_grib_view)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,19 +212,20 @@
 
         private System.Windows.Forms.Label hello_label;
         private System.Windows.Forms.Label position_label;
-        private System.Windows.Forms.ListView people_list_view;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox users_action_group_box;
         private System.Windows.Forms.GroupBox additional_group_box;
-        private System.Windows.Forms.ColumnHeader id_column_header;
-        private System.Windows.Forms.ColumnHeader name_column_header;
-        private System.Windows.Forms.ColumnHeader surname_column_header;
-        private System.Windows.Forms.ColumnHeader patronymic_column_header;
-        private System.Windows.Forms.ColumnHeader date_birth_column_header;
-        private System.Windows.Forms.ColumnHeader adress_column_header;
-        private System.Windows.Forms.ColumnHeader work_column_header;
+        private System.Windows.Forms.DataGridView people_grib_view;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surname_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patronymic_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_birth_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn work_column;
     }
 }

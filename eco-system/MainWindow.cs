@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eco_system.Forms;
 
 namespace eco_system
 {
@@ -22,12 +23,13 @@ namespace eco_system
 
         private void onActionsClick(object sender, EventArgs e)
         {
-            string buttonName = ((Button)sender).Name.ToLower();
+            string buttonName = ((Button)sender).Name;
 
+            Form formToRun = null;
             switch (buttonName)
             {
-                case "buttonAdministration": 
-
+                case "buttonAdministration":
+                    formToRun = new AdministrationForm();
                     break;
                 case "buttonMEC": 
                     
@@ -41,6 +43,7 @@ namespace eco_system
                     break;
             }
 
+            if (formToRun != null) formToRun.ShowDialog();
         }
     }
 }
