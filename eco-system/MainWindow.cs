@@ -37,9 +37,9 @@ namespace eco_system
                 case "buttonHealthcare": 
                     
                     break;
-                case "buttonPersonalAccount": 
-                    PersonalAccount personalAccount = new PersonalAccount();
-                    personalAccount.ShowDialog();
+                case "buttonPersonalAccount":
+                    formToRun = new PersonalAccount();
+                    formToRun.ShowDialog();
                     break;
             }
 
