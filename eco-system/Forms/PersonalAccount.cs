@@ -49,7 +49,8 @@ namespace eco_system.Forms
             textBoxId.Visible = false;
             buttonLogin.Visible = false;
 
-
+            labelPersonalId.Text = "ID: " + person.id;
+            labelPersonalId.Visible = true;
             labelLastname.Text = "Фамилия: " + person.lastname;
             labelLastname.Visible = true;
             labelFirstname.Text = "Имя: " + person.firstname;

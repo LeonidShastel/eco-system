@@ -35,11 +35,13 @@ namespace eco_system
                     InfoOrganization organization_mec = new InfoOrganization();
                     organization_mec.number_organization = 101;
                     organization_mec.GetInfoCalls();
+                    organization_mec.ShowDialog();
                     break;
                 case "buttonHealthcare":
                     InfoOrganization organization_zdr = new InfoOrganization();
-                    organization_zdr.number_organization = 101;
+                    organization_zdr.number_organization = 103;
                     organization_zdr.GetInfoCalls();
+                    organization_zdr.ShowDialog();
                     break;
                 case "buttonPersonalAccount":
                     formToRun = new PersonalAccount();

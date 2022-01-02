@@ -34,6 +34,7 @@
             this.user_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.call_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCalls)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,36 +57,52 @@
             this.id.Frozen = true;
             this.id.HeaderText = "ID";
             this.id.Name = "id";
+            this.id.Width = 30;
             // 
             // title
             // 
             this.title.Frozen = true;
             this.title.HeaderText = "Причина";
             this.title.Name = "title";
+            this.title.Width = 150;
             // 
             // user_name
             // 
             this.user_name.Frozen = true;
             this.user_name.HeaderText = "Имя пользователя";
             this.user_name.Name = "user_name";
+            this.user_name.Width = 150;
             // 
             // user_address
             // 
             this.user_address.Frozen = true;
-            this.user_address.HeaderText = "Адресс";
+            this.user_address.HeaderText = "Адрес";
             this.user_address.Name = "user_address";
+            this.user_address.Width = 150;
             // 
             // call_time
             // 
             this.call_time.Frozen = true;
             this.call_time.HeaderText = "Время вызова";
             this.call_time.Name = "call_time";
+            this.call_time.Width = 150;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdate.Location = new System.Drawing.Point(12, 4);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(144, 32);
+            this.buttonUpdate.TabIndex = 1;
+            this.buttonUpdate.Text = "Обновить";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
             // 
             // InfoOrganization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 320);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.dataGridViewCalls);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "InfoOrganization";
@@ -103,5 +120,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn user_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn user_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn call_time;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

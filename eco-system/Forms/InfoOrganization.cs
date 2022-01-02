@@ -26,7 +26,11 @@ namespace eco_system.Forms
             if (calls!=null)
             {
                 foreach (Call call in calls)
-                    dataGridViewCalls.Rows.Add(call.id, call.title, call.user_address, call_time);
+                {
+                    string[] date = call.call_time.Split(' ');
+                    string call_time = String.Join(" ", date[0].Split('-'))+" "+date[1];
+                    dataGridViewCalls.Rows.Add(call.id, call.title, call.user_name, call.user_address, call.call_time);
+                }
             }
         }
     }
