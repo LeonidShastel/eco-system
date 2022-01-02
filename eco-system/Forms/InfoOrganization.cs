@@ -32,5 +32,19 @@ namespace eco_system.Forms
                 }
             }
         }
+        public void GetInfoAllCalls()
+        {
+            Call[] calls;
+            calls = Task.Run(() => ApiRequests.GetCalls()).Result;
+            if (calls != null)
+            {
+                foreach (Call call in calls)
+                {
+                    string[] date = call.call_time.Split(' ');
+                    string call_time = String.Join(" ", date[0].Split('-'))+" "+date[1];
+                    dataGridViewCalls.Rows.Add(call.id, call.title, call.user_name, call.user_address, call.call_time);
+                }
+            }
+        }
     }
 }

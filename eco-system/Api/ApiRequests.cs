@@ -135,7 +135,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.DeleteAsync("http://" + host + ":" + port + "/users/"+id);
+                    HttpResponseMessage response = await client.DeleteAsync(host + "/users/"+id);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
