@@ -26,6 +26,8 @@ namespace eco_system.Forms
 
         private void updatePersonList()
         {
+            people_grid_view.Rows.Clear();
+
             Person[] persons = Task.Run(() => mApiRequests.GetUsers()).Result;
 
             if (persons != null && persons.Length > 0)
@@ -35,14 +37,14 @@ namespace eco_system.Forms
                     string[] row = { person.id.ToString(), person.firstname, person.lastname, person.patronymic, person.phone, person.date_of_birth, person.address, person.place_of_work };
 
                     people_grid_view.Rows.Add(row);
+
+                    Debug.WriteLine($"Пользователь добавлен: {row}");
                 }
             }
         }
 
         private void update_button_Click(object sender, EventArgs e)
         {
-            people_grid_view.Rows.Clear();
-
             updatePersonList();
         }
 
@@ -54,9 +56,13 @@ namespace eco_system.Forms
         private void delete_person_button_Click(object sender, EventArgs e)
         {
             int rowIndex = people_grid_view.SelectedCells[0].RowIndex;
-            object personId = people_grid_view.SelectedRows[rowIndex].Cells[0];
+            int personId = int.Parse(people_grid_view.Rows[rowIndex].Cells[0].Value.ToString());
 
-            Debug.WriteLine($"Выбранный ряд = {rowIndex}, id пользователя = {personId}");
+            bool isPersonDeleted = Task.Run(() => mApiRequests.DeletePerson(personId)).Result;
+
+            Debug.WriteLine($"Пользователь с ID = {personId} удален? -> {isPersonDeleted}");
+
+            updatePersonList();
         }
 
         private void add_person_button_Click(object sender, EventArgs e)
