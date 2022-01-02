@@ -39,7 +39,7 @@ namespace eco_system
                     break;
                 case "buttonPersonalAccount": 
                     PersonalAccount personalAccount = new PersonalAccount();
-                    personalAccount
+                    //personalAccount
                     break;
             }
 

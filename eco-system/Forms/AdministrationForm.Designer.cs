@@ -134,6 +134,7 @@
             // 
             // people_grib_view
             // 
+            this.people_grib_view.BackgroundColor = System.Drawing.SystemColors.Control;
             this.people_grib_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.people_grib_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_column,
@@ -144,9 +145,10 @@
             this.date_birth_column,
             this.address_column,
             this.work_column});
+            this.people_grib_view.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.people_grib_view.Location = new System.Drawing.Point(17, 190);
             this.people_grib_view.Name = "people_grib_view";
-            this.people_grib_view.Size = new System.Drawing.Size(844, 150);
+            this.people_grib_view.Size = new System.Drawing.Size(845, 150);
             this.people_grib_view.TabIndex = 9;
             // 
             // id_column
