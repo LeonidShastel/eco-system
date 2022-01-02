@@ -12,11 +12,12 @@ namespace eco_system.Api
         public string lastname { get; set; }
         public string firstname { get; set; }
         public string patronymic { get; set; }
+        public string phone { get; set; }
         public string date_of_birth { get; set; }
         public string address { get; set; }
         public string place_of_work { get; set; }
 
-        public Person(string lastname, string firstname, string patronymic, string date_of_birth, string address, string place_of_work)
+        public Person(string lastname, string firstname, string patronymic, string phone, string date_of_birth, string address, string place_of_work)
         {
             this.lastname = lastname;
             this.firstname = firstname;
