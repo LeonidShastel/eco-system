@@ -19,14 +19,5 @@ namespace eco_system
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Debug.WriteLine("start");
-            //Person person = Task.Run(()=>new Api.ApiRequests().GetCurrentPerson(3)).Result;
-            //Debug.WriteLine(person.firstname);
-            //person.lastname = "Шастель 2";
-
-            //new ApiRequests().GetCurrentCall(101,3);
-        }
     }
 }
