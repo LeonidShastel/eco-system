@@ -11,16 +11,16 @@ namespace eco_system.Api
 {
     internal class ApiRequests
     {
-        string host = "192.168.0.101";
-        string port = "80";
+        static string host = "192.168.0.101";
+        static string port = "80";
         
-        public async Task<Person[]> GetUsers()
+        public static async Task<Person[]> GetUsers()
         {
             using(HttpClient client = new HttpClient())
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://"+host + ":" + port + "/users");
+                    HttpResponseMessage response = await client.GetAsync("http://"+ host + ":" + port + "/users");
                     string content = await response.Content.ReadAsStringAsync();
                     if(response.StatusCode.ToString() == "OK")
                     {
@@ -38,7 +38,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Person> GetCurrentPerson(int id)
+        public static async Task<Person> GetCurrentPerson(int id)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -62,7 +62,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Person> UpdatePerson(Person person)
+        public static async Task<Person> UpdatePerson(Person person)
         {
             
             HttpContent contentResonse = new StringContent(JsonConvert.SerializeObject(person), Encoding.UTF8, "application/json");
@@ -91,7 +91,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Person> CreatePerson(Person person)
+        public static async Task<Person> CreatePerson(Person person)
         {
             HttpContent contentResonse = new StringContent(JsonConvert.SerializeObject(person,
                 Newtonsoft.Json.Formatting.None,
@@ -125,7 +125,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<bool> DeletePerson(int id)
+        public static async Task<bool> DeletePerson(int id)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -146,7 +146,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Call[]> GetCalls()
+        public static async Task<Call[]> GetCalls()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -170,7 +170,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Call[]> GetCallsOrganiztion(int number)
+        public static async Task<Call[]> GetCallsOrganiztion(int number)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -195,7 +195,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Call> GetCurrentCall(int number, int id)
+        public static async Task<Call> GetCurrentCall(int number, int id)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -220,7 +220,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Call> UpdateCall(Call call)
+        public static async Task<Call> UpdateCall(Call call)
         {
 
             HttpContent contentResonse = new StringContent(JsonConvert.SerializeObject(call), Encoding.UTF8, "application/json");
@@ -247,7 +247,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<Call> CreateCall(Call call)
+        public static async Task<Call> CreateCall(Call call)
         {
             HttpContent contentResponse = new StringContent(JsonConvert.SerializeObject(call,
                 Newtonsoft.Json.Formatting.None,
@@ -281,7 +281,7 @@ namespace eco_system.Api
                 }
             }
         }
-        public async Task<bool> DeleteCall(int id)
+        public static async Task<bool> DeleteCall(int id)
         {
             using (HttpClient client = new HttpClient())
             {
