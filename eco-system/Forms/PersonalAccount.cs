@@ -14,7 +14,6 @@ namespace eco_system.Forms
 {
     public partial class PersonalAccount : Form
     {
-        ApiRequests api = new ApiRequests();
         Person person;
         public PersonalAccount()
         {

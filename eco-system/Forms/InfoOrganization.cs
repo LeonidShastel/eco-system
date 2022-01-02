@@ -14,7 +14,6 @@ namespace eco_system.Forms
     public partial class InfoOrganization : Form
     {
         public int number_organization = 0;
-        ApiRequests api = new ApiRequests();
         public InfoOrganization()
         {
             InitializeComponent();

@@ -11,8 +11,12 @@ namespace eco_system.Api
 {
     internal class ApiRequests
     {
-        static string host = "192.168.0.101";
-        static string port = "80";
+        //local
+        //static string host = "192.168.0.101";
+        //static string port = "80";
+
+        //host
+        static string host = "https://thelaxab.ru/eco-system";
         
         public static async Task<Person[]> GetUsers()
         {
@@ -20,7 +24,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://"+ host + ":" + port + "/users");
+                    HttpResponseMessage response = await client.GetAsync(host + "/users");
                     string content = await response.Content.ReadAsStringAsync();
                     if(response.StatusCode.ToString() == "OK")
                     {
@@ -44,7 +48,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://" + host + ":" + port + "/users/"+id);
+                    HttpResponseMessage response = await client.GetAsync(host + "/users/"+id);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -70,7 +74,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.PutAsync("http://" + host + ":" + port + "/users/" + person.id,contentResonse);
+                    HttpResponseMessage response = await client.PutAsync(host + "/users/" + person.id,contentResonse);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -104,7 +108,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.PostAsync("http://" + host + ":" + port + "/users/", contentResonse);
+                    HttpResponseMessage response = await client.PostAsync(host + "/users/", contentResonse);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "Created")
                     {
@@ -152,7 +156,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://" + host + ":" + port + "/government_agencies");
+                    HttpResponseMessage response = await client.GetAsync(host + "/government_agencies");
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -176,7 +180,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://" + host + ":" + port + "/government_agencies/"+number);
+                    HttpResponseMessage response = await client.GetAsync(host + "/government_agencies/"+number);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -201,7 +205,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync("http://" + host + ":" + port + "/government_agencies/" + number+"/"+id);
+                    HttpResponseMessage response = await client.GetAsync(host + "/government_agencies/" + number+"/"+id);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -228,7 +232,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.PutAsync("http://" + host + ":" + port + "/government_agencies/" + call.id, contentResonse);
+                    HttpResponseMessage response = await client.PutAsync(host + "/government_agencies/" + call.id, contentResonse);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
@@ -260,7 +264,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.PostAsync("http://" + host + ":" + port + "/government_agencies/", contentResponse);
+                    HttpResponseMessage response = await client.PostAsync(host + "/government_agencies/", contentResponse);
                     string content = await response.Content.ReadAsStringAsync();
                     Debug.WriteLine(response.StatusCode);
                     Debug.WriteLine(content);
@@ -287,7 +291,7 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.DeleteAsync("http://" + host + ":" + port + "/government_agencies/" + id);
+                    HttpResponseMessage response = await client.DeleteAsync(host + "/government_agencies/" + id);
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
