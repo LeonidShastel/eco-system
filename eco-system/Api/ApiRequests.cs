@@ -106,7 +106,7 @@ namespace eco_system.Api
                 {
                     HttpResponseMessage response = await client.PostAsync("http://" + host + ":" + port + "/users/", contentResonse);
                     string content = await response.Content.ReadAsStringAsync();
-                    if (response.StatusCode.ToString() == "OK")
+                    if (response.StatusCode.ToString() == "Created")
                     {
                         Debug.WriteLine(content);
                         int start = content.IndexOf("\"data\":") + 7;
@@ -249,7 +249,7 @@ namespace eco_system.Api
         }
         public async Task<Call> CreateCall(Call call)
         {
-            HttpContent contentResonse = new StringContent(JsonConvert.SerializeObject(call,
+            HttpContent contentResponse = new StringContent(JsonConvert.SerializeObject(call,
                 Newtonsoft.Json.Formatting.None,
                 new JsonSerializerSettings
                 {
@@ -260,9 +260,11 @@ namespace eco_system.Api
             {
                 try
                 {
-                    HttpResponseMessage response = await client.PostAsync("http://" + host + ":" + port + "/government_agencies/", contentResonse);
+                    HttpResponseMessage response = await client.PostAsync("http://" + host + ":" + port + "/government_agencies/", contentResponse);
                     string content = await response.Content.ReadAsStringAsync();
-                    if (response.StatusCode.ToString() == "OK")
+                    Debug.WriteLine(response.StatusCode);
+                    Debug.WriteLine(content);
+                    if (response.StatusCode.ToString() == "Created")
                     {
                         Debug.WriteLine(content);
                         int start = content.IndexOf("\"data\":") + 7;

@@ -122,7 +122,7 @@
             // textBoxId
             // 
             this.textBoxId.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxId.Location = new System.Drawing.Point(134, 84);
+            this.textBoxId.Location = new System.Drawing.Point(173, 84);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(205, 33);
             this.textBoxId.TabIndex = 7;
@@ -131,7 +131,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogin.Location = new System.Drawing.Point(134, 124);
+            this.buttonLogin.Location = new System.Drawing.Point(173, 124);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(205, 41);
             this.buttonLogin.TabIndex = 8;
@@ -159,6 +159,8 @@
             this.buttonMEC.TabIndex = 10;
             this.buttonMEC.Text = "Вызвать МЧС";
             this.buttonMEC.UseVisualStyleBackColor = true;
+            this.buttonMEC.Visible = false;
+            this.buttonMEC.Click += new System.EventHandler(this.buttonsCall_Click);
             // 
             // buttonHealthcare
             // 
@@ -169,6 +171,8 @@
             this.buttonHealthcare.TabIndex = 11;
             this.buttonHealthcare.Text = "Вызвать скорую";
             this.buttonHealthcare.UseVisualStyleBackColor = true;
+            this.buttonHealthcare.Visible = false;
+            this.buttonHealthcare.Click += new System.EventHandler(this.buttonsCall_Click);
             // 
             // PersonalAccount
             // 
@@ -188,7 +192,7 @@
             this.Controls.Add(this.labelLastname);
             this.Controls.Add(this.labelPersonalId);
             this.Name = "PersonalAccount";
-            this.Text = "PersonalAccount";
+            this.Text = "Персольнальное окно";
             this.ResumeLayout(false);
             this.PerformLayout();
 
