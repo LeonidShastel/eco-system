@@ -22,6 +22,7 @@ namespace eco_system.Api
             this.lastname = lastname;
             this.firstname = firstname;
             this.patronymic = patronymic;
+            this.phone = phone;
             this.date_of_birth = date_of_birth;
             this.address = address;
             this.place_of_work = place_of_work;
