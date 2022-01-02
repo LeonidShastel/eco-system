@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eco_system.Api
 {
-    internal class Person
+    public class Person
     {
         public int id { get; set; }
         public string lastname { get; set; }
