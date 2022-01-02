@@ -26,7 +26,7 @@ namespace eco_system.Forms
             ApiRequests api = new ApiRequests();
             Call call = new Call(number, textBoxInfo.Text, person_called.id,person_called.lastname+" "+person_called.firstname+" "+person_called.patronymic,person_called.address);
            
-            Call new_call = Task.Run(()=>api.CreateCall(call)).Result;
+            Call new_call = Task.Run(() => ApiRequests.CreateCall(call)).Result;
 
             if (new_call != null)
             {

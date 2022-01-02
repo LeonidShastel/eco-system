@@ -17,10 +17,10 @@ namespace eco_system.Api
         public string address { get; set; }
         public string place_of_work { get; set; }
 
-        public Person(string lastname, string firstname, string patronymic, string phone, string date_of_birth, string address, string place_of_work)
+        public Person(string firstname, string lastname, string patronymic, string phone, string date_of_birth, string address, string place_of_work)
         {
-            this.lastname = lastname;
             this.firstname = firstname;
+            this.lastname = lastname;
             this.patronymic = patronymic;
             this.phone = phone;
             this.date_of_birth = date_of_birth;

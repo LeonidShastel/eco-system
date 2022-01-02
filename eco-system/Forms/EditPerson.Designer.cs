@@ -35,13 +35,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.name_textbox = new System.Windows.Forms.TextBox();
+            this.surname_textbox = new System.Windows.Forms.TextBox();
+            this.patronymic_textbox = new System.Windows.Forms.TextBox();
+            this.number_textbox = new System.Windows.Forms.TextBox();
+            this.date_birth_textbox = new System.Windows.Forms.TextBox();
+            this.address_text_box = new System.Windows.Forms.TextBox();
+            this.work_textbox = new System.Windows.Forms.TextBox();
+            this.save_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -114,68 +115,80 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Место работы:";
             // 
-            // textBox1
+            // name_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 7;
+            this.name_textbox.Location = new System.Drawing.Point(192, 16);
+            this.name_textbox.Name = "name_textbox";
+            this.name_textbox.Size = new System.Drawing.Size(165, 20);
+            this.name_textbox.TabIndex = 7;
             // 
-            // textBox2
+            // surname_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(192, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 20);
-            this.textBox2.TabIndex = 8;
+            this.surname_textbox.Location = new System.Drawing.Point(192, 46);
+            this.surname_textbox.Name = "surname_textbox";
+            this.surname_textbox.Size = new System.Drawing.Size(165, 20);
+            this.surname_textbox.TabIndex = 8;
             // 
-            // textBox3
+            // patronymic_textbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(192, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 20);
-            this.textBox3.TabIndex = 9;
+            this.patronymic_textbox.Location = new System.Drawing.Point(192, 78);
+            this.patronymic_textbox.Name = "patronymic_textbox";
+            this.patronymic_textbox.Size = new System.Drawing.Size(165, 20);
+            this.patronymic_textbox.TabIndex = 9;
             // 
-            // textBox4
+            // number_textbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(192, 109);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 20);
-            this.textBox4.TabIndex = 10;
+            this.number_textbox.Location = new System.Drawing.Point(192, 109);
+            this.number_textbox.Name = "number_textbox";
+            this.number_textbox.Size = new System.Drawing.Size(165, 20);
+            this.number_textbox.TabIndex = 10;
             // 
-            // textBox5
+            // date_birth_textbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(192, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 20);
-            this.textBox5.TabIndex = 11;
+            this.date_birth_textbox.Location = new System.Drawing.Point(192, 142);
+            this.date_birth_textbox.Name = "date_birth_textbox";
+            this.date_birth_textbox.Size = new System.Drawing.Size(165, 20);
+            this.date_birth_textbox.TabIndex = 11;
             // 
-            // textBox6
+            // address_text_box
             // 
-            this.textBox6.Location = new System.Drawing.Point(192, 177);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(165, 20);
-            this.textBox6.TabIndex = 12;
+            this.address_text_box.Location = new System.Drawing.Point(192, 177);
+            this.address_text_box.Multiline = true;
+            this.address_text_box.Name = "address_text_box";
+            this.address_text_box.Size = new System.Drawing.Size(165, 20);
+            this.address_text_box.TabIndex = 12;
             // 
-            // textBox7
+            // work_textbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(192, 213);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 20);
-            this.textBox7.TabIndex = 13;
+            this.work_textbox.Location = new System.Drawing.Point(192, 213);
+            this.work_textbox.Name = "work_textbox";
+            this.work_textbox.Size = new System.Drawing.Size(165, 20);
+            this.work_textbox.TabIndex = 13;
+            // 
+            // save_button
+            // 
+            this.save_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save_button.Location = new System.Drawing.Point(120, 253);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(137, 30);
+            this.save_button.TabIndex = 14;
+            this.save_button.Text = "Сохранить";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // EditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 320);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(375, 298);
+            this.Controls.Add(this.save_button);
+            this.Controls.Add(this.work_textbox);
+            this.Controls.Add(this.address_text_box);
+            this.Controls.Add(this.date_birth_textbox);
+            this.Controls.Add(this.number_textbox);
+            this.Controls.Add(this.patronymic_textbox);
+            this.Controls.Add(this.surname_textbox);
+            this.Controls.Add(this.name_textbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -199,12 +212,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox name_textbox;
+        private System.Windows.Forms.TextBox surname_textbox;
+        private System.Windows.Forms.TextBox patronymic_textbox;
+        private System.Windows.Forms.TextBox number_textbox;
+        private System.Windows.Forms.TextBox date_birth_textbox;
+        private System.Windows.Forms.TextBox address_text_box;
+        private System.Windows.Forms.TextBox work_textbox;
+        private System.Windows.Forms.Button save_button;
     }
 }

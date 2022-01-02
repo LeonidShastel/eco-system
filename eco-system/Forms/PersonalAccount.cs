@@ -27,7 +27,7 @@ namespace eco_system.Forms
             try
             {
                 id = int.Parse(textBoxId.Text);
-                person = Task.Run(()=>api.GetCurrentPerson(id)).Result;
+                person = Task.Run(() => ApiRequests.GetCurrentPerson(id)).Result;
                 if (person != null)
                     UserLogin();
             }

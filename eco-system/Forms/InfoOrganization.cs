@@ -22,8 +22,8 @@ namespace eco_system.Forms
         public void GetInfoCalls()
         {
             Call[] calls;
-            calls = Task.Run(()=> api.GetCallsOrganiztion(number_organization)).Result;
-            if (calls!=null)
+            calls = Task.Run(() => ApiRequests.GetCallsOrganiztion(number_organization)).Result;
+            if (calls != null)
             {
                 foreach (Call call in calls)
                     dataGridViewCalls.Rows.Add(call.id, call.title, call.user_address, call_time);
