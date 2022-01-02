@@ -43,6 +43,7 @@ namespace eco_system.Forms
             labelLastname.Text = "Фамилия: " + person.lastname;
             labelFirstname.Text = "Имя: " + person.firstname;
             labelPatronymic.Text = "Отчество: " + person.patronymic;
+            labelPhone.Text = "Телефон: " + person.phone;
             labelDateOfBirth.Text = "Дата рождения: " + person.date_of_birth;
             labelAddress.Text = "Адрес: " + person.address;
             labelPlaceOfWork.Text = "Место работы: " + person.place_of_work;

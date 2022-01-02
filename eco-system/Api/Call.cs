@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eco_system.Api
 {
-    internal class Call
+    public class Call
     {
         public int id { get; set; }
         public int call_number { get; set; }
