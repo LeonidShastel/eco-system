@@ -45,7 +45,9 @@
             this.date_birth_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.work_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.show_calls_button = new System.Windows.Forms.Button();
             this.users_action_group_box.SuspendLayout();
+            this.additional_group_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.people_grid_view)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,6 +131,7 @@
             // 
             // additional_group_box
             // 
+            this.additional_group_box.Controls.Add(this.show_calls_button);
             this.additional_group_box.Location = new System.Drawing.Point(266, 57);
             this.additional_group_box.Name = "additional_group_box";
             this.additional_group_box.Size = new System.Drawing.Size(243, 127);
@@ -210,6 +213,17 @@
             this.work_column.Name = "work_column";
             this.work_column.ReadOnly = true;
             // 
+            // show_calls_button
+            // 
+            this.show_calls_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.show_calls_button.Location = new System.Drawing.Point(6, 19);
+            this.show_calls_button.Name = "show_calls_button";
+            this.show_calls_button.Size = new System.Drawing.Size(231, 29);
+            this.show_calls_button.TabIndex = 7;
+            this.show_calls_button.Text = "Просмотреть звонки";
+            this.show_calls_button.UseVisualStyleBackColor = true;
+            this.show_calls_button.Click += new System.EventHandler(this.show_calls_button_Click);
+            // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +237,7 @@
             this.Name = "AdministrationForm";
             this.Text = "AdministrationForm";
             this.users_action_group_box.ResumeLayout(false);
+            this.additional_group_box.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.people_grid_view)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,5 +263,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn date_birth_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn address_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn work_column;
+        private System.Windows.Forms.Button show_calls_button;
     }
 }

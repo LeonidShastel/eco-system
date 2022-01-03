@@ -106,5 +106,12 @@ namespace eco_system.Forms
             Form editPerson = new EditPerson(null);
             editPerson.ShowDialog();
         }
+
+        private void show_calls_button_Click(object sender, EventArgs e)
+        {
+            InfoOrganization organization_mec = new InfoOrganization();
+            organization_mec.GetInfoAllCalls();
+            organization_mec.ShowDialog();
+        }
     }
 }
